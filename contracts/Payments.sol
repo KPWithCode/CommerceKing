@@ -5,12 +5,13 @@ import '@openzeppelin/contracts/token/ERC20/IERC20.sol';
 
 contract Payments {
     address public admin;
-    IERC20 public Dai;
+    IERC20 public dai;
 
 
 // event for Payment bein gDone
     event PaymentDone(
         address payer,
+        uint amount,
         uint paymentId,
         // dates are represented as integers in solidity
         uint date
@@ -25,6 +26,6 @@ contract Payments {
         // transferFrom has owner, recipient and amount
         dai.transferFrom(msg.sender, admin, amount);
         // emit event
-        emit PaymentDone(msg.sender, amount, paymentId, block.timestamp)
+        emit PaymentDone(msg.sender, amount, paymentId, block.timestamp);
     }
 }

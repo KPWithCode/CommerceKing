@@ -5,7 +5,7 @@ const ethers = require('ethers');
 const PaymentProcessor = require('../build/contracts/Payments.json');
 // const { Payment } = require('./models/payModel');
 const mongoose = require('mongoose');
-// const paymentRouter = require('./routes/api/payments');
+const paymentRouter = require('./routes/api/payments');
 
 
 const app = new Koa()
@@ -43,9 +43,9 @@ app.use(cors())
 app.use(router.routes())
 app.use(router.allowedMethods())
 
+// router
+app.use('/payments', paymentRouter);
 
-
-// app.use('/payments', paymentRouter);
 
 const DB = require('./config/keys').mongoURI
 //  Connect to Mongo

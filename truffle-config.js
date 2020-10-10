@@ -34,7 +34,8 @@ module.exports = {
    *
    * $ truffle test --network <network-name>
    */
-
+  //  allows react to access config since this is outside of src directory
+  contracts_build_directory:'./frontend/src/contracts',
   networks: {
     // Useful for testing. The `development` name is special - truffle uses it by default
     // if it's defined here and no other network is specified at the command line.

@@ -1,6 +1,6 @@
 import React, { useState, useEffect} from 'react';
 import getBlockchain from './eth';
-
+import Store from'./store';
 function App() {
   const [paymentProcessor, setPaymentProcessor] = useState(undefined);
   const [dai, setDai] = useState(undefined);
@@ -28,7 +28,7 @@ function App() {
     <div className='container'>
         <div className='col-sm-12'>
           <h1> Welcome to KCommerce</h1>
-          {/* <Store paymentProcessor={paymentProcessor} dai={dai} /> */}
+          <Store paymentProcessor={paymentProcessor} dai={dai} />
         </div>
       </div>
   );

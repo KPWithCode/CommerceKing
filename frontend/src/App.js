@@ -19,7 +19,7 @@ function App() {
       <div className='container'>
         <div className='col-sm-12'>
           <h1> Welcome to KCommerce</h1>
-          <p>Install the latest version of metamask</p>
+          <p>Please Install the latest version of metamask</p>
         </div>
       </div>
     )
@@ -31,7 +31,7 @@ function App() {
           <Store paymentProcessor={paymentProcessor} dai={dai} />
         </div>
       </div>
-  );
+  );  
 }
 
 export default App;
